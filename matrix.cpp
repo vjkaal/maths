@@ -1,16 +1,7 @@
 #include<iostream>
 #include<ctime>
 
-#include "./inc/det.h"
-
-void print2dArray(int** array, int size){
-  for(int i=0;i<size;i++){
-    for(int j=0;j<size;j++){
-      std::cout<<array[i][j]<<" ";
-    }
-    std::cout<<"\n";
-  }
-}
+#include "./inc/inv.h"
 
 int main(){
   srand(time(NULL));
@@ -25,10 +16,16 @@ int main(){
 
   for(int i=0;i<r;i++) for(int j=0;j<r;j++) matrix[i][j] = rand()%10;
 
-  print2dArray(matrix, r);
+  printMatrix(matrix, r);
 
-  int determinant = det(matrix, r);
-  std::cout<<"Determinant: "<<determinant<<std::endl;
+  int dt = det(matrix, r);
+  std::cout<<"Determinant: "<<dt<<std::endl;
+
+  int** tr = transpose(matrix, r);
+  printMatrix(matrix, r);
+
+  // int** inv = inverse(tr, r, dt);
+  printInvMatrix(tr, r, dt);
 
   return 0;
 }
