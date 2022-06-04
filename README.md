@@ -1,1 +1,1 @@
-Just a plain Maths formulas execution in cpp
+Just a plain Mathematics Formulas Execution in cpp
