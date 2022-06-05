@@ -1,4 +1,4 @@
-Just a plain Mathematics Formulas Execution in cpp
+Just a plain Execution of Mathematics Formulas in cpp
 
 Build the project:
 
